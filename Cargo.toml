@@ -1,0 +1,6 @@
+[package]
+name = "rasqal-rs"
+version = "0.1.0"
+authors = ["Nikita Baksalyar <nikita.baksalyar@maidsafe.net>"]
+
+[dependencies]
