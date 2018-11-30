@@ -1,10 +1,9 @@
 #![doc(
     html_logo_url = "https://raw.githubusercontent.com/maidsafe/QA/master/Images/maidsafe_logo.png",
     html_favicon_url = "https://maidsafe.net/img/favicon.ico",
-    test(attr(forbid(warnings))),
+    test(attr(forbid(warnings)))
 )]
-// For explanation of lint checks, run `rustc -W help` or see
-// https://github.com/maidsafe/QA/blob/master/Documentation/Rust%20Lint%20Checks.md
+// For explanation of lint checks, run `rustc -W help`.
 #![forbid(
     bad_style,
     exceeding_bitshifts,
@@ -20,8 +19,6 @@
     non_shorthand_field_patterns,
     overflowing_literals,
     plugin_as_library,
-    private_no_mangle_fns,
-    private_no_mangle_statics,
     stable_features,
     unconditional_recursion,
     unknown_lints,
@@ -55,14 +52,6 @@
 
 extern crate libc;
 
-// Bindgen generated file. Generated using the following commands:
-// ```
-// bindgen rasqal.h -o bindgen.rs --ctypes-prefix=libc --distrust-clang-mangling \
-// --raw-line="use libc;"
-//
-// sed -ie 's/&'\''static \[u8; [0-9]*usize\] = \(b".*\\0"\)/*const libc::c_char = (\1 as *const \
-// libc::c_uchar) as *const libc::c_char/g' bindgen.rs
-// ```
-mod bindgen;
+mod rasqal;
 
-pub use bindgen::*;
+pub use rasqal::*;
