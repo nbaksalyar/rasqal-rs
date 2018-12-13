@@ -1,6 +1,19 @@
 [package]
+authors = ["MaidSafe Developers <dev@maidsafe.net>"]
+build = "build.rs"
+categories = ["api-bindings"]
+description = "Raw bindings to librasqal"
+homepage = "https://maidsafe.net"
+keywords = ["rasqal", "rdf", "query"]
+license = "MIT OR Apache-2.0"
 name = "rasqal-rs"
+repository = "https://github.com/maidsafe/rasqal-rs"
 version = "0.1.0"
-authors = ["Nikita Baksalyar <nikita.baksalyar@maidsafe.net>"]
 
 [dependencies]
+ffi_utils = "~0.11.0"
+libc = "~0.2.44"
+unwrap = "~1.2.0"
+
+[build-dependencies]
+bindgen = "0.42.2"
